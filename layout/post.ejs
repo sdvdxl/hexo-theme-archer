@@ -6,26 +6,26 @@
     <ul class="post-pager">
         <% if (page.prev){ %>
             <li class="next">
-                <a href= "<%- url_for(page.prev.path) %>" title= <%- page.prev.title %> >
-                    <span>Next Post</span>
+                <a href="<%- url_for(page.prev.path) %>" title=< %- page.prev.title %> >
+                    <span>上一篇</span>
                     <span><%- page.prev.title || '[Untitled Post]' %></span>
                 </a>
             </li>
-        <% } %>
-        <% if (page.next){ %>
-            <li class="previous">
-                <a href= "<%- url_for(page.next.path) %>" title= <%- page.next.title %> >
-                    <span>Previous Post</span>
+            <% } %>
+                <% if (page.next){ %>
+                    <li class="previous">
+                        <a href="<%- url_for(page.next.path) %>" title=< %- page.next.title %> >
+                    <span>下一篇</span>
                     <span><%- page.next.title || '[Untitled Post]' %></span>
                 </a>
-            </li>
-        <% } %>
+                    </li>
+                    <% } %>
     </ul>
     <!-- 评论插件 -->
     <%- partial('_partial/comment/livere') %>
-    <%- partial('_partial/comment/disqus') %>
-    <%- partial('_partial/comment/gitment') %>
-    <%- partial('_partial/comment/changyan') %>
-    <%- partial('_partial/comment/youyan') %>
-    <%- partial('_partial/comment/custom') %>
+        <%- partial('_partial/comment/disqus') %>
+            <%- partial('_partial/comment/gitment') %>
+                <%- partial('_partial/comment/changyan') %>
+                    <%- partial('_partial/comment/youyan') %>
+                        <%- partial('_partial/comment/custom') %>
 </main>
