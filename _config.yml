@@ -1,15 +1,15 @@
 # ========== Profile ========== #
 # avatar
-avatar: /avatar/kumamon.jpg
+avatar: /images/me.jpg
 # author name
-author: fi3ework
+author: sdvdxl(杜龙少)
 # signature
 signature: witness me
 # SNS
 social:
-  email: 12345@qq.com
-  github: //github.com/fi3ework
-  weibo:
+  #email: 12345@qq.com
+  github: https://github.com/sdvdxl
+  weibo: https://weibo.com/sdvdxl
   # zhihu:
   # facebook:
   # twitter:
@@ -20,24 +20,24 @@ social:
   rss: /atom.xml
 # friends
 friends:
-  friendA: //www.baidu.com
-  friendB: //www.google.com
+  #friendA: //www.baidu.com
+  #friendB: //www.google.com
   # friendC :
 about:
-  enable: true
+  enable: false
   image: '/intro/about-page.jpg'
 
 # ========== Site ========== #
 # title of the site
-SEO_title: fi3ework's Studio
+SEO_title: sdvdxl 杜龙少
 # main title
-main_title: fi3ework's Studio.
+main_title: 'sdvdxl'
 # subtitle
-subtitle: it's better to burn out than to fade away
+subtitle: '杜龙少'
 # site haeder image
-site_header_image: 'http://oumn0o088.bkt.clouddn.com/intro-desktop.jpg'
+site_header_image: '/images/header.jpg'
 # post haeder image
-post_header_image: 'http://oumn0o088.bkt.clouddn.com/post-bg.jpg'
+post_header_image: '/images/header.jpg'
 # 404 image
 _404_image: 'http://oumn0o088.bkt.clouddn.com/404.jpg'
 
@@ -72,7 +72,7 @@ CNZZ_analytics:
 
 # ========== Others ========== #
 # favicon
-favicon: /assests/favicon.ico
+favicon: /images/favicon.ico
 # truncate length (the default is 300)
 truncate_length:
 # enable toc
