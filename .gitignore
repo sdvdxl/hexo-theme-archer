@@ -1,3 +1,5 @@
 node_modules
 .vscode
-.eslintrc.json
+_config_.yml
+_config__.yml
+.jsbeautifyrc
