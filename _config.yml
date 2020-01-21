@@ -12,21 +12,23 @@ social:
   weibo: https://weibo.com/sdvdxl
   email: 12345@qq.com
   # wechat and qq should be a path of qr-code image
-  wechat: 
-  qq: 
-  weibo: 
-  zhihu: 
-  douban: 
-  facebook: 
-  twitter: 
-  instagram: 
-  stack-overflow: 
-  segmentFault: 
-  juejin: 
-  v2ex: 
-  bilibili: 
-  linkedin: 
-  others: 
+  wechat:
+  qq:
+  telegram:
+  weibo:
+  zhihu:
+  douban:
+  facebook:
+  twitter:
+  instagram:
+  stack-overflow:
+  segmentFault:
+  juejin:
+  v2ex:
+  bilibili:
+  linkedin:
+  steam:
+  others:
   rss: /atom.xml
 # friends
 friends:
@@ -38,10 +40,15 @@ about:
   image: '/intro/about-page.jpg'
 
 # ========== Site ========== #
-# title of the site
-SEO_title: sdvdxl 杜龙少
-# main title
-main_title: 'sdvdxl'
+# title of the site (good for SEO)
+SEO_title: fi3ework's Studio
+# keywords for site (good for SEO)
+SEO_keywords:
+  - hexo
+  - 'hexo-theme'
+  - 'hexo-blog'
+# main title shown in header image
+main_title: fi3ework's Studio.
 # subtitle
 subtitle: '杜龙少'
 # site haeder image
@@ -67,23 +74,20 @@ algolia_search:
 # If you want to add other comment plugin, edit in "custom.ejs"
 comment:
   # Livere  site: https://livere.com/
-  livere_uid: 
+  livere_uid:
   # Disqus  site: https://disqus.com/
-  disqus_shortname: 
-  # Changyan  site: http://changyan.kuaizhan.com/
-  changyan_appid: 
-  changyan_conf: 
+  disqus_shortname:
   # Gitment  site: https://github.com/imsun/gitment
-  gitment_owner: 
-  gitment_repo: 
-  gitment_client_id: 
-  gitment_client_secret: 
+  gitment_owner:
+  gitment_repo:
+  gitment_client_id:
+  gitment_client_secret:
   # Youyan  site: http://www.uyan.cc/
-  youyan_uid: 
+  youyan_uid:
   # Valine  site: https://valine.js.org/
-  valine_appId: 
-  valine_appKey: 
-  valine_placeHolder: 
+  valine_appId:
+  valine_appKey:
+  valine_placeHolder:
 
 # ========== Analytics ========== #
 # enable Busuanzi analytics
@@ -93,11 +97,11 @@ busuanzi_pv_or_uv: 'pv'
 # custom analytic slogan, '${count}' is the analytic number, DO NOT modify it.
 busuanzi_slug: 'PV: ${count} :)'
 # Baidu analytics
-baidu_analytics: 
+baidu_analytics:
 # Google analytics
-google_analytics: 
+google_analytics:
 # CNZZ analytics
-CNZZ_analytics: 
+CNZZ_analytics:
 
 # ========== Others ========== #
 # favicon

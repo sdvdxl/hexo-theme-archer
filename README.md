@@ -19,7 +19,7 @@ hexo-theme-archer
 - 2017.08.17 - 『添加了置顶显示』
 - 2017.08.26 - 『添加了二次开发文档，文章页 header 在下滑时隐藏』
 - 2017.09.10 - 『添加了 about 页面』
-- 2017.09.25 - 『可以直接添加 disqus，gitment 及畅言了』
+- 2017.09.25 - 『可以直接添加 disqus，gitment 了』
 - 2017.09.30 - 『添加了 rss，修复了 placeholder 的 bug，更流畅』
 - 2017.10.05 - 『添加 toc，默认开启，可在配置中关闭』
 - 2017.10.16 - 『修复移动端 bug，增加渐入效果』
@@ -36,13 +36,14 @@ hexo-theme-archer
 - 2018.06.04 - 『添加 Algolia 搜索，[详情](https://github.com/fi3ework/hexo-theme-archer/wiki/%E5%90%AF%E7%94%A8-Algolia-%E6%90%9C%E7%B4%A2)』
 - 2018.06.23 - 『添加 Valine 评论，感谢 [hulichao](https://github.com/fi3ework/hexo-theme-archer/issues/115) 同学』
 - 2018.07.09 - 『可以切换深/浅色代码配色方案了，[详情](https://github.com/fi3ework/hexo-theme-archer/wiki/%E5%88%87%E6%8D%A2%E4%BB%A3%E7%A0%81%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88)』
+- 2018.08.26 - 『添加 i18n 支持』
 
 ## 说明
 
 - 本主题受 [yilia](https://github.com/litten/hexo-theme-yilia) 主题和 [huxpro](https://github.com/Huxpro/huxpro.github.io) 主题的启发，结合了前者的 sidebar 设计及后者的 UI 设计。通过 sidebar 能够不跳转到 archive 页、tag页及 categories 页进行导航。
 - 兼容性：现代浏览器及 IE10+。
 - 有任何使用上的问题欢迎 [**发起 issue**](https://github.com/fi3ework/hexo-theme-archer/wiki/%E5%90%AF%E7%94%A8-Algolia-%E6%90%9C%E7%B4%A2)。
-- 本主题会持续维护及优化，欢迎 star 😆。
+- Due to lack of time, this theme is not guaranteed to be maintained, welcome fork 👋🏻.
 
 ##  安装
 
@@ -82,6 +83,8 @@ jsonContent:
     categories: true
     tags: true
 ```
+
+
 ## 可选配置
 
 - [启用 about 页](https://github.com/fi3ework/hexo-theme-archer/wiki/%E5%90%AF%E7%94%A8about%E9%A1%B5)
@@ -96,6 +99,7 @@ jsonContent:
 - [设置文章版权信息](https://github.com/fi3ework/hexo-theme-archer/wiki/%E8%AE%BE%E7%BD%AE%E6%96%87%E7%AB%A0%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF)
 - [启用站内搜索](https://github.com/fi3ework/hexo-theme-archer/wiki/%E5%90%AF%E7%94%A8-Algolia-%E6%90%9C%E7%B4%A2)
 - [启用 Latex](https://github.com/fi3ework/hexo-theme-archer/wiki/%E5%90%AF%E7%94%A8-Latex-%E6%94%AF%E6%8C%81)
+- [切换为英文界面](https://github.com/fi3ework/hexo-theme-archer/wiki/%E8%8B%B1%E6%96%87%E7%95%8C%E9%9D%A2)
 
 ## 主题配置
 
@@ -103,17 +107,18 @@ jsonContent:
 # ========== 资料栏 ========== #
 # 头像路径
 avatar:
-# 博主名字，不填写该字段则默认采用Hexo配置文件中的author字段
+# 博主名字，不填写该字段则默认采用 Hexo 配置文件中的 author 字段
 author:
 # 博客签名
 signature:
-# 社交账号 (可以自定义顺序)
+# 社交账号(可以自定义顺序)
 social:
   email:
   github:
   # wechat 和 qq 需要填写二维码图片的路径
   wechat:
   qq:
+  telegram:
   weibo:
   zhihu:
   douban:
@@ -133,16 +138,18 @@ friends:
   friendA:
   friendB:
   friendC:
-# about页面
+# about 页面
 about:
-  # 是否启用about页
+  # 是否启用 about 页
   enable: true
-  # about页头图
+  # about 页头图
   image:
 
 # ========== 站点 ========== #
-# 网站的title，每篇文章后面也会加上此字段利于SEO
+# 网站的 title，每篇文章后面也会加上此字段利于 SEO
 SEO_title:
+# 网站的关键字，有利于 SEO，每篇文章也可以在 Front-matter 添加特定的关键字
+SEO_keywords:
 # 显示在网站头图上的主标题
 main_title: 
 # 显示在网站头图上的副标题
@@ -151,7 +158,7 @@ subtitle:
 header_image:
 # 文章页默认头图
 post_header_image:
-# 404页头图
+# 404 页头图
 _404_image:
 
 # ========== 搜索 ========== #
@@ -165,16 +172,13 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms" # 搜索无结果的提示
     
 # ========== 评论插件 ========== #
-# 目前支持直接添加Livere，Disqus，Gitment，畅言、友言及 Valine，填写插件对应的字段即可启用。(推荐使用 Livere)
-# 如果想添加其他评论插件，在custom.ejs中添加即可。
+# 目前支持直接添加 Livere，Disqus，Gitment，友言及 Valine，填写插件对应的字段即可启用。(推荐使用 Livere)
+# 如果想添加其他评论插件，在 custom.ejs 中添加即可。
 comment:
   # Livere 官网：https://livere.com/
   livere_uid:
   # Disqus 官网：https://disqus.com/
   disqus_shortname:
-  # 畅言 官网：http://changyan.kuaizhan.com/
-  changyan_appid:
-  changyan_conf:
   # Gitment 官网：https://github.com/imsun/gitment
   gitment_owner:
   gitment_repo:
@@ -194,9 +198,9 @@ busuanzi: true
 busuanzi_pv_or_uv: 'pv'
 # 自定义统计标语，'${count}' 会自动替换成统计值
 busuanzi_slug: 'PV: ${count} :)'
-# 百度统计(填写siteID)
+# 百度统计(填写 siteID)
 baidu_analytics:
-# Google统计(填写siteID)
+# Google统计(填写 siteID)
 google_analytics:
 # CNZZ统计
 CNZZ_analytics:
@@ -210,7 +214,7 @@ truncate_length:
 toc: true
 # 字数统计 & 阅读时间
 reading_info: true
-# 头图高度 (默认是屏幕高度的50%, 可以直接输入其他数字)
+# 头图高度 (默认是屏幕高度的 50%, 可以直接输入其他数字)
 index_intro_height: 50
 post_intro_height: 50
 about_intro_height: 50

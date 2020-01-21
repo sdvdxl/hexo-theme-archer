@@ -66,6 +66,10 @@
   align-items: center;
 }
 
+.word-count{
+  margin-right: 1rem;
+}
+
 .post-fade-in {
   opacity: 1;
   transform: translate3d(0, 0, 0);
@@ -414,10 +418,4 @@
 
 .toc-hide {
   display: none;
-}
-
-// fancybox
-.fancy-link {
-  padding: 0 !important;
-  margin: 0 !important;
 }
