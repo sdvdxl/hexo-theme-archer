@@ -11,9 +11,16 @@
         <%- partial('base-social') %>
     </div>
     <% } %>
+
+    <% if(theme.about.enable) { %>
+        <div class="about-me">
+            <a href = "<%- url_for("/about") %>" >关于我</a>
+        </div>
+    <% } %>
+
     <% if(theme.friends) { %>
         <div class="friends">
-            <div>FRIENDS</div>
+            <div>友链</div>
             <% for (name in theme.friends) { %>
                 <% if(theme.friends[name]) { %>
                     <span>
@@ -21,11 +28,6 @@
                     </span>
                 <% } %>
             <% } %>
-        </div>
-    <% } %>
-    <% if(theme.about.enable) { %>
-        <div class="about-me">
-            <a href = "<%- url_for("/about") %>" >ABOUT ME</a>
         </div>
     <% } %>
 </div>
