@@ -2,9 +2,9 @@
 # avatar
 avatar: https://public-links.todu.top/images/blog/me.jpg
 # author name
-author: sdvdxl(杜龙少)
+author: 杜龙少
 # signature
-signature: 鲁ICP备17022134号
+signature: sdvdxl
 # SNS (you can custom the order)
 social:
   #email: 12345@qq.com
@@ -44,13 +44,16 @@ about:
 
 # ========== Site ========== #
 # title of the site
-SEO_title: sdvdxl 杜龙少
+SEO_title: 杜龙少
 # main title
 main_title: 杜龙少(sdvdxl)
 SEO_keywords:
   - sdvdxl
   - 杜龙少
-
+  - todu.top
+  - todu
+  - 知识的积累
+  - 思想的火花
 # subtitle
 subtitle: 知识的积累，思想的火花
 # site haeder image
