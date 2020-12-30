@@ -16,7 +16,7 @@
     <ul class="post-paginator">
         <li class="next">
             <% if (page.prev){ %>
-                <div class="nextSlogan">上一篇</div>
+                <div class="nextSlogan"><a href= "<%- url_for(page.prev.path) %>" title= "<%- page.prev.title %>">上一篇</a></div>
                 <a href= "<%- url_for(page.prev.path) %>" title= "<%- page.prev.title %>">
                     <div class="nextTitle"><%- page.prev.title || '[Untitled Post]' %></div>
                 </a>
@@ -24,7 +24,7 @@
         </li>
         <li class="previous">
             <% if (page.next){ %>
-                <div class="prevSlogan">下一篇</div>
+                <div class="prevSlogan"><a href= "<%- url_for(page.next.path) %>" title= "<%- page.next.title %>">下一篇</a></div>
                 <a href= "<%- url_for(page.next.path) %>" title= "<%- page.next.title %>">
                     <div class="prevTitle"><%- page.next.title || '[Untitled Post]' %></div>
                 </a>
